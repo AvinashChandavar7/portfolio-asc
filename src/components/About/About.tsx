@@ -3,7 +3,7 @@ import React from 'react'
 import Bounded from "../Bounded";
 import Heading from '../Heading';
 import Button from '../Button';
-import Image from 'next/image';
+
 import Avatar from './Avatar';
 
 const About = () => {
@@ -45,8 +45,6 @@ Join me as I continue to push the boundaries of what's possible in the digital w
           image={data.avatar}
           className="row-start-1 max-w-sm md:col-start-2 md:row-end-3 rounded-md"
         />
-
-
       </div>
     </Bounded>
   )
