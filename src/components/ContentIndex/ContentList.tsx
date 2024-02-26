@@ -112,7 +112,7 @@ const ContentList = (
     })
   }, [contentImages, currentItem]);
 
-  const urlPrefix = contentType === 'Blog' ? '/blog' : '/project';
+  const urlPrefix = contentType === "Blog" ? "/blog" : "/project";
 
   return (
     <div ref={component}>

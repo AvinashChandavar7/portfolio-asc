@@ -1,6 +1,10 @@
 export interface BlogData {
   uid: string;
   title: string;
+  body: {
+    text: string;
+    image_url: string;
+  };
   date: Date;
   tags: string[];
   hover_image: string;
@@ -9,6 +13,10 @@ export interface BlogData {
 export interface ProjectData {
   uid: string;
   title: string;
+  body: {
+    text: string;
+    image_url: string;
+  };
   date: Date;
   tags: string[];
   hover_image: string;
