@@ -1,7 +1,9 @@
 import React from "react";
-import ContentBody from "@/components/ContentBody";
-import { dataBlog } from "@/constants/constants";
+
 import { BlogData } from "@/Types/type";
+import { dataBlog } from "@/constants/constants";
+
+import ContentBody from "@/components/ContentBody";
 
 type Params = { uid: string };
 
@@ -13,7 +15,9 @@ const Page = ({ params }: { params: Params }) => {
       {data ? (
         <ContentBody data={data} />
       ) : (
-        <p>Blog post not found</p>
+        <h1 className="mx-auto text-[30vmin] font-black text-slate-200">
+          Blog post not found
+        </h1>
       )}
     </>
   );

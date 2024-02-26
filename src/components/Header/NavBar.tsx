@@ -54,14 +54,14 @@ const NavBar = () => {
         </div>
         <div
           className={clsx(
-            "fixed bottom-0 left-0 right-0 top-0 z-50 flex flex-col items-end gap-4 bg-slate-50 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden",
+            "fixed bottom-0 left-0 right-0 top-0 z-50 flex flex-col items-end gap-4 bg-slate-800 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden",
             open ? "translate-x-0" : "translate-x-full",
           )}
         >
           <button
             aria-label="Close menu"
             aria-expanded={open}
-            className="fixed right-4 top-3 block p-2 text-2xl text-slate-800 md:hidden"
+            className="fixed right-4 top-3 block p-2 text-2xl text-slate-100 md:hidden"
             onClick={() => setOpen(false)}
           >
             <MdClose />
@@ -72,8 +72,8 @@ const NavBar = () => {
                 <Link
                   href={link}
                   className={clsx(
-                    "group relative block overflow-hidden rounded px-3 text-3xl font-bold text-slate-900",
-                    { "bg-blue-300": pathname.includes(link as string), }
+                    "group relative block  overflow-hidden rounded px-3 text-xl font-bold text-slate-100",
+                    { "bg-blue-500": pathname.includes(link as string), }
                   )}
                   onClick={() => setOpen(false)}
                 >
@@ -128,7 +128,7 @@ function DesktopMenu({
               className={clsx(
                 "group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-900",
                 {
-                  "bg-blue-300": pathname.includes(link as string),
+                  "bg-blue-500": pathname.includes(link as string),
                 }
               )}
               href={link}

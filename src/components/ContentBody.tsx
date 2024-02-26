@@ -1,8 +1,11 @@
+import Image from "next/image";
+
+import { BlogData, ProjectData } from "@/Types/type";
+
 import Heading from "@/components/Heading";
 import Bounded from "@/components/Bounded";
+
 import { formatDate } from "@/utils/formatDate";
-import { BlogData, ProjectData } from "@/Types/type";
-import Image from "next/image";
 
 interface ContentBodyProps {
   data: BlogData | ProjectData;

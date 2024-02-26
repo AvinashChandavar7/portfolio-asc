@@ -1,9 +1,8 @@
 import React from 'react'
-import ContentIndex from '@/components/ContentIndex/ContentIndex'
+
 import { MainDataProps } from '@/Types/type'
 
-
-
+import ContentIndex from '@/components/ContentIndex/ContentIndex'
 
 const Page = () => {
 
@@ -14,8 +13,6 @@ const Page = () => {
     view_more_text: "Read more",
     fallback_item_image: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107",
   }
-
-
 
   return (
     <>

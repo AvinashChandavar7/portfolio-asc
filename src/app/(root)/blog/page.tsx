@@ -1,6 +1,8 @@
 import React from 'react'
-import ContentIndex from '@/components/ContentIndex/ContentIndex'
+
 import { MainDataProps } from '@/Types/type'
+
+import ContentIndex from '@/components/ContentIndex/ContentIndex'
 
 
 

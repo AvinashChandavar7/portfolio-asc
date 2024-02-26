@@ -1,38 +1,8 @@
-// import clsx from "clsx";
-
-// type HeadingProps = {
-//   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-//   size?: "xl" | "lg" | "md" | "sm";
-//   children: React.ReactNode;
-//   className?: string;
-// };
-
-// export default function Heading({
-//   as: Comp = "h1",
-//   className,
-//   children,
-//   size = "lg",
-// }: HeadingProps) {
-//   return (
-//     <Comp
-//       className={clsx(
-//         "font-bold leading-tight tracking-tight  text-slate-300",
-//         size === "xl" && "text-7xl md:text-9xl",
-//         size === "lg" && "text-6xl md:text-8xl",
-//         size === "md" && "text-5xl md:text-6xl",
-//         size === "sm" && "text-3xl md:text-4xl",
-//         className,
-//       )}
-//     >
-//       {children}
-//     </Comp>
-//   );
-// }
-
 "use client"
+
 import clsx from "clsx";
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 type HeadingProps = {
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -41,12 +11,9 @@ type HeadingProps = {
   className?: string;
 };
 
-export default function Heading({
-  as: Comp = "h1",
-  className,
-  children,
-  size = "lg",
-}: HeadingProps) {
+export default function Heading(
+  { as: Comp = "h1", className, children, size = "lg", }: HeadingProps
+) {
 
   const component = useRef(null)
   const renderLetters = (name: string, key: string) => {
@@ -71,7 +38,6 @@ export default function Heading({
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // create as many GSAP animations and/or ScrollTriggers here as you want...
       gsap
         .timeline()
         .fromTo(
@@ -89,7 +55,7 @@ export default function Heading({
           },
         )
     }, component);
-    return () => ctx.revert(); // cleanup!
+    return () => ctx.revert();
   }, []);
 
   return (

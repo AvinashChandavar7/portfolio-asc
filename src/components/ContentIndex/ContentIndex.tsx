@@ -1,11 +1,11 @@
 import React from 'react'
+
+import { MainDataProps } from '@/Types/type'
+import { dataBlog, dataProject } from '@/constants/constants'
+
 import Bounded from '../Bounded'
 import Heading from '../Heading'
 import ContentList from './ContentList'
-
-
-import { dataBlog, dataProject } from '@/constants/constants'
-import { MainDataProps } from '@/Types/type'
 
 
 const ContentIndex = (data: MainDataProps) => {

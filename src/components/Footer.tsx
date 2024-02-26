@@ -18,8 +18,8 @@ export default async function Footer() {
 
     ],
     github_link: "https://github.com/AvinashChandavar7",
-    twitter_link: "",
-    linkedin_link: "https://www.linkedin.com/in/avinash-chandavar-300a06220/"
+    linkedin_link: "https://www.linkedin.com/in/avinash-chandavar-300a06220/",
+    twitter_link: "https://twitter.com/",
   }
 
 
@@ -69,36 +69,48 @@ export default async function Footer() {
             ))}
           </ul>
         </nav>
+
+
         <div className="socials inline-flex justify-center sm:justify-end">
           {data.github_link && (
-            <Link
+            <SocialLink
               href={data.github_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={data.name + " on GitHub"}
-            >
-              <FaGithub />
-            </Link>
+              label={data.name + " on GitHub"}
+              icon={<FaGithub />}
+            />
           )}
-          {data.twitter_link && (
-            <Link
-              href={data.twitter_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={data.name + " on Twitter"}
-            >
-              <FaTwitter />
-            </Link>
-          )}
+
           {data.linkedin_link && (
-            <Link
+            <SocialLink
               href={data.linkedin_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={data.name + " on LinkedIn"}
-            >
-              <FaLinkedin />
-            </Link>
+              label={data.name + " on LinkedIn"}
+              icon={<FaLinkedin />}
+            />
+          )}
+
+          {data.twitter_link && (
+            <SocialLink
+              href={data.twitter_link}
+              label={data.name + " on Twitter"}
+              icon={<FaTwitter />}
+            />
           )}
         </div>
+
       </div>
     </Bounded>
   );
 }
+
+
+const SocialLink = (
+  { href, label, icon }: { href: string; label: string; icon: React.ReactNode }
+) => (
+  <Link
+    href={href}
+    className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+    aria-label={label}
+  >
+    {icon}
+  </Link>
+);

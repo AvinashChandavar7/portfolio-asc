@@ -3,7 +3,6 @@ import React from 'react'
 import Bounded from "../Bounded";
 import Heading from '../Heading';
 import Button from '../Button';
-
 import Avatar from './Avatar';
 
 const About = () => {

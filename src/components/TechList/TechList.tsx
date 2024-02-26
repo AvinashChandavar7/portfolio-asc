@@ -1,15 +1,13 @@
 "use client"
 
-import React, { Fragment, useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { MdCircle } from 'react-icons/md'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+import React, { Fragment, useEffect, useRef } from 'react'
 
 import Heading from '../Heading'
 import Bounded from '../Bounded'
 
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger);
 
