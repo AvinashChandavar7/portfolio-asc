@@ -11,14 +11,14 @@ const About = () => {
   const data = {
     heading: "About Avinash",
     description: `
-    Hey, I’m Andy! I grew up in the Pacific Northwest and love all things creative. From the misty forests to the vibrant city streets, my surroundings have always fueled my passion for design and coding.
+  👋 Hello! I'm Avinash S Chandavar, a Frontend Developer passionate about crafting captivating web experiences. 🚀 I'm currently honing my skills through an immersive frontend development course at crio.do, where I'm mastering HTML, CSS, JavaScript, and React to bring designs to life and create seamless user interactions.
 
-As a self-taught developer, I found my calling in blending artistic flair with technical skill. My journey has led me to specialize in front-end development, where I craft interactive experiences that are not just functional, but also visually stunning.
+🌱 Learning is a constant joy for me, and I actively seek out new challenges to enhance my web development skills. React, with its versatility and dynamic capabilities, has captured my imagination and pushed me to create more innovative projects.
 
-When I'm not coding, you'll find me experimenting with digital art or exploring the latest in web animation.
+🌐 My goal is to create user-friendly and visually stunning web applications that leave a lasting impression. Transforming ideas into functional websites brings me immense satisfaction and joy.
 
-Join me as I continue to push the boundaries of what's possible in the digital world!
-    `,
+💼 As a dedicated learner, I'm eagerly open to entry-level opportunities that allow me to contribute my frontend expertise and collaborate with innovative teams. I'm committed to growing as a developer and being part of projects that drive positive change.
+`,
     button_link: "Resume",
     button_text: "Resume",
     avatar: '/name.jpg'

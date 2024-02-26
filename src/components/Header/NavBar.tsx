@@ -32,8 +32,8 @@ const NavBar = () => {
 
     nav_items: [
       { id: "1", label: "About", link: "/about" },
-      { id: "2", label: "Blog", link: "/blog" },
-      { id: "3", label: "Project", link: "/project" },
+      { id: "2", label: "Project", link: "/project" },
+      { id: "3", label: "Blog", link: "/blog" },
 
     ]
   };
