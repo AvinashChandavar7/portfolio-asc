@@ -77,14 +77,17 @@ export default async function Footer() {
               href={data.github_link}
               label={data.name + " on GitHub"}
               icon={<FaGithub />}
+              color="blue-500"
             />
           )}
+
 
           {data.linkedin_link && (
             <SocialLink
               href={data.linkedin_link}
               label={data.name + " on LinkedIn"}
               icon={<FaLinkedin />}
+              color="blue-500"
             />
           )}
 
@@ -93,6 +96,7 @@ export default async function Footer() {
               href={data.twitter_link}
               label={data.name + " on Twitter"}
               icon={<FaTwitter />}
+              color="blue-500"
             />
           )}
         </div>
@@ -104,13 +108,19 @@ export default async function Footer() {
 
 
 const SocialLink = (
-  { href, label, icon }: { href: string; label: string; icon: React.ReactNode }
+  { href, label, icon, color }: { href: string; label: string; icon: React.ReactNode, color: string }
 ) => (
   <Link
     href={href}
-    className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+    target="_blank"
+    className={clsx("p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125",
+      color && `hover:text-${color}`
+    )}
+
     aria-label={label}
   >
+
     {icon}
+
   </Link>
 );

@@ -40,7 +40,7 @@ const NavBar = () => {
 
   return (
     <nav aria-label="Main navigation">
-      <ul className="flex flex-col justify-between rounded-b-lg bg-slate-50 px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl">
+      <ul className="flex flex-col justify-between rounded-b-lg bg-slate-400 px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl">
         <div className="flex items-center justify-between">
           <NameLogo name={data.name} />
           <button
@@ -73,7 +73,7 @@ const NavBar = () => {
                   href={link}
                   className={clsx(
                     "group relative block  overflow-hidden rounded px-3 text-xl font-bold text-slate-100",
-                    { "bg-blue-500": pathname.includes(link as string), }
+                    { "bg-blue-500 ": pathname.includes(link as string), }
                   )}
                   onClick={() => setOpen(false)}
                 >
@@ -126,14 +126,22 @@ function DesktopMenu({
           <li>
             <Link
               className={clsx(
-                "group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-900",
-                {
-                  "bg-blue-500": pathname.includes(link as string),
-                }
+                "group relative block overflow-hidden rounded px-4 py-1 text-base font-bold text-slate-900 hover:text-white",
               )}
               href={link}
+              aria-current={
+                pathname.includes(link as string) ? "page" : undefined
+              }
             >
-              <span>{label}</span>
+              <span
+                className={clsx(
+                  "absolute inset-0 z-99 h-full rounded bg-blue-500  transition-transform  duration-300 ease-in-out group-hover:translate-y-0 ",
+                  pathname.includes(link as string)
+                    ? "translate-y-7"
+                    : "translate-y-8",
+                )}
+              />
+              <span className="relative ">{label}</span>
             </Link>
           </li>
 
