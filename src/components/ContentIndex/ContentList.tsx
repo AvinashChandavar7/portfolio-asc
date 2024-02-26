@@ -103,6 +103,15 @@ const ContentList = (
 
   }, [currentItem]);
 
+  useEffect(() => {
+    contentImages.forEach((url) => {
+      if (!url) return;
+
+      const img = new Image();
+      img.src = url;
+    })
+  }, [contentImages, currentItem]);
+
   const urlPrefix = contentType === 'Blog' ? '/blog' : '/project';
 
   return (
